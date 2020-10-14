@@ -1,0 +1,209 @@
+html {
+    box-sizing: border-box;
+}
+*, *:before, *:after {
+    box-sizing: inherit;
+  }
+body {
+    position: relative;
+    font-size: 1rem;
+    width: 100%;
+    margin: 0;
+    background-color: #f4fdd9;
+}
+#title {
+    text-align: center;
+    color: #f0a868;
+}
+#description {
+    text-align: center;
+}
+
+#survey-form {
+    border: 1px solid #6A8D73;
+    border-radius: 25px;
+    width: 750px;
+    margin: 2rem auto;
+    box-shadow: 4px 4px 4px gray;
+}
+
+.form-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    flex-wrap: nowrap;
+}
+.col-left,
+.col-right {
+    padding: 0 .75rem;
+    margin: 1rem 0;
+}
+.form-hint {
+    display: block;
+}
+label {
+    display: flex;
+    align-items: center;
+}
+.checkbox-button {
+    margin-right: 1rem;
+}
+/*****************
+/* text inpust #2444fd
+/****************/
+.form-input {
+    position: relative;
+    margin: 20px 0;
+}
+.form-input #name-label,
+.form-input #email-label {
+    position: absolute;
+    top: 0;
+    left: 5px;
+    bottom: 0;
+    z-index: 2;
+    opacity: 0.5;
+    transition: 0.3s ease all;
+    margin: 0;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    user-select: none;
+}
+.form-input #name-label:after,
+.form-input #email-label:after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 10%;
+    height: 2px;
+    width: 10px;
+    visibility: hidden;
+    background-color: #6A8D73;
+    transition: 0.3s ease all;
+}
+.line {
+    position: absolute;
+    width: 0%;
+    height: 3px;
+    display: inline-block;
+    transition: 0.3s width ease-in-out;
+    bottom: 0;
+    left: 0;
+}
+
+#name,
+#email {
+    position: relative;
+    padding-top: 10px;
+    border: none;
+    border-bottom: 1px solid #6A8D73;
+    width: 100%;
+    background-color: inherit;
+}
+#name:focus,
+#email:focus {
+    /* box-shadow: none; */
+    outline: 0;
+    /* border-bottom-color: rgba(0,0,0,0.12); */
+
+}
+#name:focus + .line,
+#email:focus + .line {
+    width: 100%;
+    background-color: #6A8D73;
+}
+
+#name:focus ~ #name-label,
+#email:focus ~ #email-label {
+    font-weight: 700;
+    opacity: 1;
+    left: 3px;
+    bottom: 100px;
+    color: #6A8D73;
+    font-size: 12px;
+}
+/* needed to pass fcc test */
+#name::placeholder,
+#email::placeholder {
+    opacity: 0;
+}
+#number {
+    width: 100%;
+    margin-top: 5px;
+    background-color: inherit;
+    border: 1px solid #6A8D73;
+}
+#dropdown {
+    width: 100%;
+    background-color: inherit;
+    border: 1px solid #6A8D73;
+}
+#dropdown:focus {
+    border: 1px solid #6A8D73;
+}
+.radio-button {
+    background-color: inherit;
+}
+.form-group p {
+    margin-bottom: 5px;
+}
+.form-textarea {
+    text-align: center;   
+}
+.form-textarea p {
+    margin: 0;
+}
+.form-fetured-review {
+    display: flex;
+    justify-content: center;
+    margin: 10px 0;
+    font-size: .75rem;
+}
+.fetured-review {
+    width: .75rem;
+    margin-right: .75rem;
+}
+#comments {
+    max-width: 500px;
+    height: 250px;
+    width: 100%;
+    margin-top: 10px;
+    border: 1px solid #6A8D73;
+    background-color: inherit;
+}
+#comments:focus {
+    border: 2px solid #6A8D73;
+    outline: #6A8D73;
+}
+.form-group-submit {
+    text-align: center;
+}
+#submit {
+    background-color: #f0a868;
+    border: 1px solid #f0a868;
+    border-radius: 25px;
+    color: #fff;
+    margin: 10px 0;
+    padding: 10px 25px;
+    text-transform: uppercase;
+    -moz-transition: all .5s ease;
+    -o-transition: all .5s ease;
+    -webkit-transition: all .5s ease;
+    transition: all .5s ease;
+}
+#submit:hover {
+    background-color: #f8c065;
+}
+
+@media only screen and (max-width: 769px) {
+    #survey-form {
+        width: 100%;
+        /* margin: 10px; */
+    }
+    .form-container {
+        flex-direction: column;
+    }
+    #comments {
+        width: 90%;
+    }
+}

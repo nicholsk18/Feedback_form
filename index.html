@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Developer Feedback | Karson Nichols</title>
+
+    <meta name="discription" content="Feedback form for Karson Nichols development work" />
+    <link rel="stylesheet" href="main.css">
+</head>
+<body>
+    <h1 id="title">Project Performance Review</h1>
+    <p id="description">Thank you for taking the time to help me improve as a developer</p>
+
+    <form id="survey-form" action="">
+        <div class="form-container">
+            <div class="col-left">
+                <div class="form-input">
+                    <input id="name" type="text" name="name" placeholder="Name" required />
+                    <div class="line"></div>
+                    <label id="name-label" for="name">Name</label>
+                </div>
+    
+                <div class="form-input">
+                    <input id="email" type="email" name="email" placeholder="Email" required />
+                    <div class="line"></div>
+                    <label id="email-label" for="email">Email</label>
+                </div>
+    
+                <div class="form-group">
+                    <label id="number-label" for="performance">Rate the project</label>
+                    <input id="number" type="number" name="performance" min="0" max="100" placeholder="Rate project performance" />
+                </div>
+    
+                <div class="form-group">
+                    <p>What was Karsons role on this project?</p>
+                    <select name="role" id="dropdown">
+                        <option disabled selected value>Select developers role</option>
+                        <option value="frontend">Frontend Developer</option>
+                        <option value="backend">Backend Developer</option>
+                        <option value="fullstack">Fullstack Developer</option>
+                    </select>
+                </div>
+    
+                <div class="form-group">
+                    <p>Whas there a specific framework used?</p>
+                    <select name="role" id="dropdown">
+                        <option disabled selected value>Select a framework</option>
+                        <option value="react-redux">React/Redux</option>
+                        <option value="vue">Vue</option>
+                        <option value="laravel">Laravel</option>
+                        <option value="yii2">Yii2</option>
+                        <option value="wordpress">Wordpress Theme</option>
+                        <option value="none">None</option>
+                    </select>
+                </div>
+            </div>
+
+            <div class="col-right">
+                <div class="form-group">
+                    <p>Would you recommand Karson to a friend?</p>
+                </div>
+                <label for="">
+                    <input class="radio-button" name="recommendation" type="radio" value="definitely" checked />
+                    Definitely
+                </label>
+                <label for="">
+                    <input class="radio-button" name="recommendation" type="radio" value="maybe" />
+                    Maybe
+                </label>
+                <label for="">
+                    <input class="radio-button" name="recommendation" type="radio" value="not-sure" />
+                    Not sure
+                </label>
+    
+                <div class="form-group">
+                    <p>What did Karson developed for this project <small class="form-hint">(Check all that apply)</small></p>
+                    <label for="">
+                        <input class="checkbox-button" name="project-details" type="checkbox" value="designed-ux-ui" />
+                        Designed UX/UI
+                    </label>
+                    <label>
+                        <input class="checkbox-button" name="project-details" type="checkbox" value="developed-ux-ui" />
+                        Developed UX/UI
+                    </label>
+                    <label for="">
+                        <input class="checkbox-button" name="project-details" type="checkbox" value="psd-to-webapp" />
+                        Turned PSD to a functional website
+                    </label>
+                    <label for="">
+                        <input class="checkbox-button" name="project-details" type="checkbox" value="designed-api" />
+                        Designed API
+                    </label>
+                    <label for="">
+                        <input class="checkbox-button" name="project-details" type="checkbox" value="developed-shopping-cart" />
+                        Developed eCommerce app
+                    </label>
+                    <label for="">
+                        <input class="checkbox-button" name="project-details" type="checkbox" value="wordpress-theme" />
+                        Created a WordPress Theme
+                    </label>
+                    <label for="">
+                        <input class="checkbox-button" name="project-details" type="checkbox" value="wordpress-fixes" />
+                        Fixed issues with WordPress
+                    </label>
+                    <label for="">
+                        <input class="checkbox-button" name="project-details" type="checkbox" value="website-fixes" />
+                        Fixed issues on a website
+                    </label>
+                </div>
+            </div>
+        </div>
+        
+        <div class="form-textarea">
+            <p>Any other comments?</p>
+            <textarea id="comments" name="comment" placeholder="Enter your comment here..."></textarea>
+        </div>
+
+        <div class="form-fetured-review">
+            <label for="">
+                <input class="fetured-review" name="fetured-review" type="checkbox" value="canFeature" checked/>
+                Can this review be fetured on my portfolio?
+            </label>
+        </div>
+
+        <div class="form-group-submit">
+            <button id="submit" type="submit">Submit <span style="display: none;">Icon</span></button>
+        </div>
+    </form>
+</body>
+</html>
